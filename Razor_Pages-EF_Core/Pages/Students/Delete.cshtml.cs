@@ -24,7 +24,7 @@ namespace Razor_Pages_EF_Core.Pages.Students
 
         public string ErrorMessage { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)//, bool? saveChangeError = false)
+        public async Task<IActionResult> OnGetAsync(int? id, bool? saveChangeError = false)
         {
             if (id == null)
             {
@@ -32,7 +32,7 @@ namespace Razor_Pages_EF_Core.Pages.Students
             }
 
             Student = await _context.Students
-            //.AsNoTracking()
+            .AsNoTracking()
             .FirstOrDefaultAsync(m => m.ID == id);
 
             if (Student == null)
@@ -40,10 +40,10 @@ namespace Razor_Pages_EF_Core.Pages.Students
                 return NotFound();
             }
 
-            // if (saveChangeError.GetValueOrDefault())
-            // {
-            //     ErrorMessage = "Delete failed. Try again.";
-            // }
+            if (saveChangeError.GetValueOrDefault())
+            {
+                ErrorMessage = "Delete failed. Try again.";
+            }
 
             return Page();
         }

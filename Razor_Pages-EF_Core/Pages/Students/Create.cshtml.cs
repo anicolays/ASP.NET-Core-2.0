@@ -34,25 +34,20 @@ namespace Razor_Pages_EF_Core.Pages.Students
                 return Page();
             }
 
-            // var emptyStudent = new Student();
-            // if (await TryUpdateModelAsync<Student>(
-            //     emptyStudent,
-            //     "student", //Prefix for form value.
-            //     s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate
-            // ))
-            // {
-            //     _context.Students.Add(emptyStudent);
-            //     await _context.SaveChangesAsync();
+            var emptyStudent = new Student();
+            if (await TryUpdateModelAsync<Student>(
+                emptyStudent,
+                "student", //Prefix for form value.
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate
+            ))
+            {
+                _context.Students.Add(emptyStudent);
+                await _context.SaveChangesAsync();
 
-            //     return RedirectToPage("./Index");
-            // }
+                return RedirectToPage("./Index");
+            }
 
-            // return null;
-
-            _context.Students.Add(Student);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            return null;
         }
     }
 }

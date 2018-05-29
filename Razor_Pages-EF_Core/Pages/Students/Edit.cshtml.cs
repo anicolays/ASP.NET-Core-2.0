@@ -39,42 +39,25 @@ namespace Razor_Pages_EF_Core.Pages.Students
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()//int? id)
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            // var studentToUpdate = await _context.Students.FindAsync(id);
+            var studentToUpdate = await _context.Students.FindAsync(id);
 
-            // if (await TryUpdateModelAsync<Student>(
-            //     studentToUpdate,
-            //     "student",
-            //     s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
-            // {
-            //     await _context.SaveChangesAsync();
-            //     return RedirectToPage("./Index");
-            // }
-
-            // return Page();
-
-            #region From template
-            _context.Attach(Student).State = EntityState.Modified;
-
-
-            try
+            if (await TryUpdateModelAsync<Student>(
+                studentToUpdate,
+                "student",
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
             {
                 await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-
+                return RedirectToPage("./Index");
             }
 
-            return RedirectToPage("./Index");
-            #endregion
-
+            return Page();
         }
     }
 }
