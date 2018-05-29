@@ -1,0 +1,11 @@
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\bin\Debug\netcoreapp2.0\Razor_Pages-EF_Core.deps.json
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\bin\Debug\netcoreapp2.0\Razor_Pages-EF_Core.runtimeconfig.json
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\bin\Debug\netcoreapp2.0\Razor_Pages-EF_Core.runtimeconfig.dev.json
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\bin\Debug\netcoreapp2.0\Razor_Pages-EF_Core.dll
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\bin\Debug\netcoreapp2.0\Razor_Pages-EF_Core.pdb
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\obj\Debug\netcoreapp2.0\Razor_Pages-EF_Core.csprojResolveAssemblyReference.cache
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\obj\Debug\netcoreapp2.0\Razor_Pages-EF_Core.csproj.CoreCompileInputs.cache
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\obj\Debug\netcoreapp2.0\Razor_Pages-EF_Core.AssemblyInfoInputs.cache
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\obj\Debug\netcoreapp2.0\Razor_Pages-EF_Core.AssemblyInfo.cs
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\obj\Debug\netcoreapp2.0\Razor_Pages-EF_Core.dll
+C:\Users\Mykola\Desktop\ASP.NET Core 2.0\Razor_Pages-EF_Core\obj\Debug\netcoreapp2.0\Razor_Pages-EF_Core.pdb
