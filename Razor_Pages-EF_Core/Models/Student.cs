@@ -13,6 +13,8 @@ namespace Razor_Pages_EF_Core.Models
 
         [Display(Name = "First and Middle Name")]
         public string FirstMidName { get; set; }
+
+        public int? Age { get; set; }
         public DateTime EnrollmentDate { get; set; }
 
         public ICollection<Enrollment> Enrollments { get; set; }
