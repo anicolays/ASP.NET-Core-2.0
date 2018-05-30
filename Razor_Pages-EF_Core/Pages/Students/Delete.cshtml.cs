@@ -55,15 +55,29 @@ namespace Razor_Pages_EF_Core.Pages.Students
                 return NotFound();
             }
 
-            Student = await _context.Students.FindAsync(id);
+            Student = await _context.Students
+            .AsNoTracking()
+            .FirstOrDefaultAsync(m => m.ID == id);
 
-            if (Student != null)
+            if (Student == null)
             {
-                _context.Students.Remove(Student);
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
 
-            return RedirectToPage("./Index");
+            try
+            {
+                throw new DbUpdateException("", new Exception());
+
+                _context.Students.Remove(Student);
+                await _context.SaveChangesAsync();
+
+                return RedirectToPage("./Index");
+            }
+            catch (DbUpdateException)
+            {
+                return RedirectToAction("./Delete", new { id = id, saveChangeError = true });
+            }
+
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Razor_Pages_EF_Core.Pages.Students
             if (await TryUpdateModelAsync<Student>(
                 emptyStudent,
                 "student", //Prefix for form value.
-                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate,  s => s.Age
             ))
             {
                 _context.Students.Add(emptyStudent);
