@@ -66,8 +66,7 @@ namespace Razor_Pages_EF_Core.Pages.Students
 
             try
             {
-                throw new DbUpdateException("", new Exception());
-
+                //throw new DbUpdateException("", new Exception());
                 _context.Students.Remove(Student);
                 await _context.SaveChangesAsync();
 
